@@ -42,7 +42,8 @@ Example:
       sql:{
         type: String,
         reflectToAttribute: true,
-        notify: true
+        notify: true,
+        observer: 'query'
       },
       viewData: {
         type: Array,
@@ -63,7 +64,12 @@ Example:
       } else { 
         self.query(); 
       } 
-      self.addEventListener('sql-changed', self.query);
+    },
+    provision: function(data){
+      console.log("Data provision!");
+      var self = this; 
+      self.viewData = data;
+      self.fire('db-data', data);
     },
     query: function(){
       console.log("Sending query request..."); 

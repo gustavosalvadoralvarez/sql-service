@@ -157,7 +157,9 @@ Example:
       )
     },
     provisionViews: function(db){
-      console.log("Provisioning views...")
+      console.log("Provisioning views...");
+      var self;
+      self = this;
       return function(e){
         console.log(e);
         var view, viewSql;
@@ -168,13 +170,12 @@ Example:
         db.executeSql(viewSql).then(
           function(viewData){ 
             console.log("Sql query processed sucessfully!");
-            console.log(viewData);
-            view.viewData = viewData;
-
+            view.provision(viewData);
           },
           function (e){ 
             console.log('View provisioning error: ');
             console.log(e);
+            self.fire(' error', e);
           }
         );
       }
