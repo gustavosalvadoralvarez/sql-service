@@ -1,0 +1,15 @@
+{
+	"name": "demodata", 
+	"autoIncrement": true, 
+	"indexes": [ 
+		{ "keyPath":"A" },
+		{ "keyPath":"B" },
+		{ "keyPath":"C" },
+		{ "keyPath":"D" },
+		{ "keyPath":"E" },
+		{ "keyPath":"F" },
+		{ "keyPath":"G" },
+		{ "keyPath":"H" },
+		{ "keyPath":"I" }
+	]
+}
