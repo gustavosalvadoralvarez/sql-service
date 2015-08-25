@@ -1,6 +1,6 @@
 {
-  "name": "indexed-db-store",
-  "version": "1.0.0",
+  "name": "sql-service",
+  "version": "0.0.5",
   "authors": [
     "Anonymous <anonymous@example.com>"
   ],
